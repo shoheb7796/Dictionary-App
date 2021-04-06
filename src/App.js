@@ -5,6 +5,7 @@ import { Container, Switch, withStyles } from '@material-ui/core';
 import Header from './Components/Header/Header';
 import Definitions from './Components/Definitions/Definitions';
 import { grey } from '@material-ui/core/colors';
+import Footer from './Components/Footer/Footer';
 
 function App() {
 
@@ -51,8 +52,8 @@ function App() {
             backgroundColor: lightMode ? "#fff" : "#282c34", 
             color: lightMode ? "black" : "white",
             transition :"all 0.5s linear",
-          }}>
-      
+          }}
+      >
       <Container 
         maxWidth="md" style={{ display: "flex", flexDirection: "column", height: "100vh", justifyContent:"space-evenly" }}>
 
@@ -72,6 +73,7 @@ function App() {
           <Definitions word={word} meanings={meanings} category={category} lightMode={lightMode}/>)
         }
       </Container>
+      <Footer />
     </div>
   );
 }
